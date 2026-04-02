@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clone </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1b2838;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #171a21;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #66c0f4;
+        }
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 10px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            background-color: #3d4c5a;
+            color: white;
+        }
+        .search-bar input::placeholder {
+            color: #c7d5e0;
+        }
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #66c0f4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1b2838;
+        }
+        .nav-tabs {
+            background-color: #2a475e;
+            border-bottom: none;
+            position: sticky;
+            top: 60px;
+            z-index: 999;
+            justify-content: center;
+        }
+        .nav-tabs .nav-link {
+            color: white;
+            border: none;
+            font-weight: bold;
+            padding: 12px 20px;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #66c0f4;
+            color: #1b2838;
+            border-radius: 5px 5px 0 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .banner {
+            background: linear-gradient(135deg, #2a475e 0%, #1b2838 100%);
+            padding: 0;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+        .banner img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: white;
+        }
+        .banner-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .banner-subtitle {
+            font-size: 14px;
+            color: #c7d5e0;
+            margin-bottom: 12px;
+        }
+        .banner-badge {
+            background-color: #66c0f4;
+            color: #1b2838;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .section-title {
+            color: #66c0f4;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+.carousel-inner {
+            background-color: transparent;
+        }
+        .carousel-item {
+            padding: 10px;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+            opacity: 1;
+        }
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: #66c0f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .game-card {
+            background-color: #3d4c5a;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+        .game-card:hover {
+            transform: scale(1.02);
+        }
+        .game-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .game-info {
+            padding: 15px;
+        }
+        .game-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .game-price {
+            color: #c7d5e0;
+            font-size: 14px;
+        }
+        .btn-primary {
+            background-color: #66c0f4;
+            border-color: #66c0f4;
+        }
+        .btn-primary:hover {
+            background-color: #5aa9da;
+            border-color: #5aa9da;
+        }
+        .wishlist-item, .wallet-item {
+            background-color: #3d4c5a;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        body {
+            padding-bottom: 100px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #171a21;
+            border-top: 1px solid #2a475e;
+            padding: 12px 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .footer-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            cursor: pointer;
+            flex: 1;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .footer-item:hover {
+            color: #66c0f4;
+            background-color: rgba(102, 192, 244, 0.1);
+        }
+        .footer-item.active {
+            color: #66c0f4;
+            border-top: 3px solid #66c0f4;
+        }
+        .footer-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .footer-label {
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="https://img.icons8.com/ios-filled/40/66c0f4/shopping-cart.png" alt="Shopping Cart"></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search games, friends, etc.">
+        </div>
+        <div class="profile-icon">U</div>
+    </div>
+
+    <div class="banner">
+        <img src="https://via.placeholder.com/800x250/1a1a2e/66c0f4?text=ELDEN+RING+SHADOW+OF+ERDTREE" alt="Elden Ring Promo">
+        <div class="banner-overlay">
+            <div class="banner-badge">NEW EXPANSION</div>
+            <div class="banner-title">Elden Ring: Shadow of the Erdtree</div>
+            <div class="banner-subtitle">Enter the Land of Shadow | Out Now</div>
+            <button class="btn btn-primary btn-sm" style="width: fit-content;">Learn More</button>
+        </div>
+    </div>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="menu-tab" data-bs-toggle="tab" data-bs-target="#menu" type="button" role="tab" aria-controls="menu" aria-selected="true">Menu</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="news" aria-selected="false">News</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a href="wishlist.html" class="nav-link" style="text-decoration: none; color: white;">Wishlist</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a href="wallet.html" class="nav-link" style="text-decoration: none; color: white;">Wallet</a>
+        </li>
+    </ul>
+
+    <div class="tab-content content" id="myTabContent">
+        <div class="tab-pane fade show active" id="menu" role="tabpanel" aria-labelledby="menu-tab">
+            <h2 class="section-title">Featured & Recommended</h2>
+            <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="game-card">
+                                    <img src="https://via.placeholder.com/200x150/66c0f4/ffffff?text=Cyberpunk+2077" alt="Cyberpunk 2077">
+                                    <div class="game-info">
+                                        <div class="game-title">Cyberpunk 2077</div>
+                                        <div class="game-price">$29.99</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="game-card">
+                                    <img src="https://via.placeholder.com/200x150/66c0f4/ffffff?text=The+Witcher+3" alt="The Witcher 3">
+                                    <div class="game-info">
+                                        <div class="game-title">The Witcher Wild Hunt</div>
+                                        <div class="game-price">$19.99</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="game-card">
+                                    <img src="https://via.placeholder.com/200x150/66c0f4/ffffff?text=Elden+Ring" alt="Elden Ring">
+                                    <div class="game-info">
+                                        <div class="game-title">Elden Ring</div>
+                                        <div class="game-price">$39.99</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="game-card">
+                                    <img src="https://via.placeholder.com/200x150/66c0f4/ffffff?text=Hades" alt="Hades">
+                                    <div class="game-info">
+                                        <div class="game-title">Hades</div>
+                                        <div class="game-price">$24.99</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="game-card">
+                                    <img src="https://via.placeholder.com/200x150/66c0f4/ffffff?text=Baldurs+Gate+3" alt="Baldur's Gate 3">
+                                    <div class="game-info">
+                                        <div class="game-title">Baldur's Gate 3</div>
+                                        <div class="game-price">$59.99</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="game-card">
+                                    <img src="https://via.placeholder.com/200x150/66c0f4/ffffff?text=Dragon+Age" alt="Dragon Age Veilguard">
+                                    <div class="game-info">
+                                        <div class="game-title">Dragon Age Veilguard</div>
+                                        <div class="game-price">$49.99</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true">&#10094;</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true">&#10095;</span>
+                </button>
+            </div>
+        </div>
+
+        
+        <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">
+            <h2 class="section-title">News & Updates</h2>
+            <div class="wishlist-item">
+                <div class="game-title">New Game Released: Stellar Quest</div>
+                <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">Discover the latest space exploration adventure now available on Clone!</p>
+                <p style="font-size: 11px; color: #b0becc; margin-top: 8px;">2 hours ago</p>
+            </div>
+            <div class="wishlist-item">
+                <div class="game-title">Winter Sale Extended!</div>
+                <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">Get up to 80% off on selected games. Don't miss this amazing deal!</p>
+                <p style="font-size: 11px; color: #b0becc; margin-top: 8px;">5 hours ago</p>
+            </div>
+            <div class="wishlist-item">
+                <div class="game-title">Community Update: New Features</div>
+                <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">Check out the latest updates and improvements made based on your feedback.</p>
+                <p style="font-size: 11px; color: #b0becc; margin-top: 8px;">1 day ago</p>
+            </div>
+            <div class="wishlist-item">
+                <div class="game-title">Achievement Unlocked: Community Milestone</div>
+                <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">We've reached 10 million active players! Thank you for being part of our community!</p>
+                <p style="font-size: 11px; color: #b0becc; margin-top: 8px;">3 days ago</p>
+            </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="menu-footer" role="tabpanel" aria-labelledby="menu-footer-tab">
+            <h2 class="section-title">Menu</h2>
+            <div class="wishlist-item" style="cursor: pointer;">
+                <div class="game-title">⚙️ Settings & Preferences</div>
+                <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">Manage your account and game settings</p>
+            </div>
+            <div class="wishlist-item" style="cursor: pointer;">
+                <div class="game-title">❓ Help & Support</div>
+                <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">Get help with common issues and contact support</p>
+            </div>
+            <div class="wishlist-item" style="cursor: pointer;">
+                <div class="game-title">ℹ️ About Clone</div>
+                <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">Information about the platform and terms of service</p>
+            </div>
+            <div class="wishlist-item" style="cursor: pointer;">
+                <div class="game-title">🚪 Logout</div>
+                <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">Sign out from your account</p>
+            </div>
+        </div>
+    <div class="footer">
+        <a href="index.html" class="footer-item active">
+            <div class="footer-icon">🏠</div>
+            <div class="footer-label">Menu Utama</div>
+        </a>
+        <a href="notifikasi.html" class="footer-item">
+            <div class="footer-icon">🔔</div>
+            <div class="footer-label">Notifikasi</div>
+        </a>
+        <a href="#" class="footer-item">
+            <div class="footer-icon">☰</div>
+            <div class="footer-label">Menu</div>
+        </a>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        console.log('Clone Loaded');
+    </script>
+</body>
+</html>
+ 

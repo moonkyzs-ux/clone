@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifikasi - Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1b2838;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #171a21;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #66c0f4;
+        }
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 10px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            background-color: #3d4c5a;
+            color: white;
+        }
+        .search-bar input::placeholder {
+            color: #c7d5e0;
+        }
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #66c0f4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1b2838;
+        }
+        .nav-tabs {
+            background-color: #2a475e;
+            border-bottom: none;
+            position: sticky;
+            top: 60px;
+            z-index: 999;
+            justify-content: center;
+        }
+        .nav-tabs .nav-link {
+            color: white;
+            border: none;
+            font-weight: bold;
+            padding: 12px 20px;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #66c0f4;
+            color: #1b2838;
+            border-radius: 5px 5px 0 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section-title {
+            color: #66c0f4;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .wishlist-item {
+            background-color: #3d4c5a;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .game-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        body {
+            padding-bottom: 100px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #171a21;
+            border-top: 1px solid #2a475e;
+            padding: 12px 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .footer-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            cursor: pointer;
+            flex: 1;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .footer-item:hover {
+            color: #66c0f4;
+            background-color: rgba(102, 192, 244, 0.1);
+        }
+        .footer-item.active {
+            color: #66c0f4;
+            border-top: 3px solid #66c0f4;
+        }
+        .footer-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .footer-label {
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .back-button {
+            margin-bottom: 20px;
+        }
+        .back-button a {
+            color: #66c0f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-button a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="https://img.icons8.com/ios-filled/40/66c0f4/shopping-cart.png" alt="Shopping Cart"></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search games, friends, etc.">
+        </div>
+        <div class="profile-icon">U</div>
+    </div>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a href="index.html" class="nav-link" style="text-decoration: none; color: white;">Menu</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="News-tab" data-bs-toggle="tab" data-bs-target="#News" type="button" role="tab" aria-controls="News" aria-selected="true">News</button>
+        </li
+        <li class="nav-item" role="presentation">
+            <a href="wishlist.html" class="nav-link" style="text-decoration: none; color: white;">Wishlist</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a href="wallet.html" class="nav-link" style="text-decoration: none; color: white;">Wallet</a>
+        </li>
+    </ul>
+
+    <div class="content">
+        <h2 class="section-title">Notifikasi</h2>
+        <div class="wishlist-item">
+            <div class="game-title" style="color: #66c0f4;">✓ Purchase Successful</div>
+            <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">Cyberpunk 2077 has been added to your library.</p>
+            <p style="font-size: 11px; color: #b0becc; margin-top: 8px;">2 hours ago</p>
+        </div>
+        <div class="wishlist-item">
+            <div class="game-title" style="color: #66c0f4;">📦 Download Available</div>
+            <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">The Witcher 3 v2.1 update is ready to download (3.5 GB)</p>
+            <p style="font-size: 11px; color: #b0becc; margin-top: 8px;">5 hours ago</p>
+        </div>
+        <div class="wishlist-item">
+            <div class="game-title" style="color: #66c0f4;">👥 Friend Online</div>
+            <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">John_Gaming is now playing Elden Ring</p>
+            <p style="font-size: 11px; color: #b0becc; margin-top: 8px;">15 minutes ago</p>
+        </div>
+        <div class="wishlist-item">
+            <div class="game-title" style="color: #66c0f4;">🎮 Wishlist Update</div>
+            <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">Dragon's Dogma 2 is now 20% off!</p>
+            <p style="font-size: 11px; color: #b0becc; margin-top: 8px;">1 day ago</p>
+        </div>
+        <div class="wishlist-item">
+            <div class="game-title" style="color: #66c0f4;">🎁 Free Game Available</div>
+            <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">This week's free game is now available in your library</p>
+            <p style="font-size: 11px; color: #b0becc; margin-top: 8px;">3 hours ago</p>
+        </div>
+        <div class="wishlist-item">
+            <div class="game-title" style="color: #66c0f4;">💬 New Message</div>
+            <p style="font-size: 12px; color: #c7d5e0; margin-top: 5px;">You have a new message from admin_clone</p>
+            <p style="font-size: 11px; color: #b0becc; margin-top: 8px;">30 minutes ago</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="index.html" class="footer-item">
+            <div class="footer-icon">🏠</div>
+            <div class="footer-label">Menu Utama</div>
+        </a>
+        <a href="notifikasi.html" class="footer-item active">
+            <div class="footer-icon">🔔</div>
+            <div class="footer-label">Notifikasi</div>
+        </a>
+        <a href="#" class="footer-item">
+            <div class="footer-icon">☰</div>
+            <div class="footer-label">Menu</div>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        console.log('Notifikasi Page Loaded');
+    </script>
+</body>
+</html>

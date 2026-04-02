@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #1b2838;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-bottom: 100px;
+        }
+        
+       
+        .header {
+            background-color: #171a21;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #66c0f4;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            width: 36px;
+            height: 36px;
+        }
+        
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+            max-width: 400px;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            background-color: #3d4c5a;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .search-bar input::placeholder {
+            color: #8b98a7;
+        }
+        
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #66c0f4 0%, #4a9fce 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1b2838;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .profile-icon:hover {
+            transform: scale(1.1);
+        }
+        
+     
+        .content {
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+        
+        .back-button a {
+            background-color: #66c0f4;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button a:hover {
+            background-color: #5aa9da;
+            transform: translateX(-3px);
+        }
+        
+        .section-title {
+            color: #66c0f4;
+            font-size: 28px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+      
+        .news-item {
+            background: linear-gradient(135deg, #2a475e 0%, #1f3a52 100%);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #66c0f4;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .news-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 6px 20px rgba(102, 192, 244, 0.2);
+            border-left-color: #5aa9da;
+        }
+        
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            gap: 15px;
+        }
+        
+        .news-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #66c0f4;
+            margin-bottom: 5px;
+            flex: 1;
+        }
+        
+        .news-badge {
+            background-color: #66c0f4;
+            color: #1b2838;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 11px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .news-badge.update {
+            background-color: #1abc9c;
+        }
+        
+        .news-badge.event {
+            background-color: #f39c12;
+        }
+        
+        .news-badge.sale {
+            background-color: #e74c3c;
+        }
+        
+        .news-badge.feature {
+            background-color: #9b59b6;
+        }
+        
+        .news-badge.maintenance {
+            background-color: #95a5a6;
+        }
+        
+        .news-description {
+            font-size: 15px;
+            color: #c7d5e0;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        
+        .news-meta {
+            font-size: 13px;
+            color: #8b98a7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .news-game {
+            background-color: rgba(102, 192, 244, 0.15);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+      
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #171a21;
+            border-top: 2px solid #2a475e;
+            padding: 12px 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .footer-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            cursor: pointer;
+            flex: 1;
+            text-decoration: none;
+            color: #8b98a7;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-item:hover {
+            color: #66c0f4;
+            background-color: rgba(102, 192, 244, 0.1);
+        }
+        
+        .footer-item.active {
+            color: #66c0f4;
+            border-top: 3px solid #66c0f4;
+            margin-top: -3px;
+        }
+        
+        .footer-icon {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        
+        .footer-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="index.html" class="logo">
+            <img src="https://img.icons8.com/ios-filled/40/66c0f4/shopping-cart.png" alt="Clone Logo">
+            Clone
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search news, games, events...">
+        </div>
+        <div class="profile-icon">U</div>
+    </div>
+
+  
+    <div class="content">
+        <div class="back-button">
+            <a href="index.html">← Back to Home</a>
+        </div>
+        
+        <h2 class="section-title">📰 Latest News & Updates</h2>
+
+        <div class="news-item">
+            <div class="news-header">
+                <div>
+                    <div class="news-title">🎮 Baldur's Gate 3: Patch 1.3 - Major Update Released</div>
+                    <span class="news-badge update">PATCH UPDATE</span>
+                </div>
+            </div>
+            <div class="news-description">
+                The highly anticipated Patch 1.3 for Baldur's Gate 3 is now live! This major update brings new companion quests, expanded character customization options, improved UI/UX, enhanced multiplayer stability, and numerous bug fixes. Download now and experience the latest improvements to your adventure in the Forgotten Realms!
+            </div>
+            <div class="news-meta">
+                <span class="news-game">🎮 Baldur's Gate 3</span>
+                <span>📅 Today • 2 hours ago</span>
+            </div>
+        </div>
+
+    
+        <div class="news-item">
+            <div class="news-header">
+                <div>
+                    <div class="news-title">💰 Spring Mega Sale - Up to 80% OFF!</div>
+                    <span class="news-badge sale">SALE EVENT</span>
+                </div>
+            </div>
+            <div class="news-description">
+                Our biggest spring sale is NOW LIVE! Get massive discounts on thousands of games including AAA titles, indie gems, and more. Save up to 80% on your <a href="wishlist.html" style="color: #66c0f4; text-decoration: underline;">wishlist</a> favorites! This exclusive offer ends March 19, 2026 at 11:59 PM UTC. Don't miss out on incredible deals!
+            </div>
+            <div class="news-meta">
+                <span class="news-game">🏪 Platform Event</span>
+                <span>📅 Today • 4 hours ago</span>
+            </div>
+        </div>
+
+      
+        <div class="news-item">
+            <div class="news-header">
+                <div>
+                    <div class="news-title">🌟 Stellar Quest - Epic Space Adventure Now Available</div>
+                    <span class="news-badge">NEW RELEASE</span>
+                </div>
+            </div>
+            <div class="news-description">
+                Embark on an epic journey across the cosmos! Stellar Quest is now officially available on Clone. Explore breathtaking alien planets, discover ancient mysteries, build your intergalactic empire, and engage in thrilling space combat. Experience stunning graphics and immersive gameplay like never before!
+            </div>
+            <div class="news-meta">
+                <span class="news-game">🚀 Stellar Quest</span>
+                <span>📅 Yesterday • 1 day ago</span>
+            </div>
+        </div>
+
+     
+        <div class="news-item">
+            <div class="news-header">
+                <div>
+                    <div class="news-title">🏆 Elden Ring Community PvP Tournament - Join Now!</div>
+                    <span class="news-badge event">EVENT</span>
+                </div>
+            </div>
+            <div class="news-description">
+                The Battle of the Tarnished is here! Join the biggest Elden Ring PvP tournament with amazing prizes. Compete against players worldwide for exclusive cosmetics, special titles, and up to 5000 Clone Credits! Registration closes March 25, 2026. Limited spots available!
+            </div>
+            <div class="news-meta">
+                <span class="news-game">⚔️ Elden Ring</span>
+                <span>📅 Yesterday • 1 day ago</span>
+            </div>
+        </div>
+
+    
+        <div class="news-item">
+            <div class="news-header">
+                <div>
+                    <div class="news-title">✨ The Witcher 3: Next-Gen Graphics Update</div>
+                    <span class="news-badge update">UPDATE</span>
+                </div>
+            </div>
+            <div class="news-description">
+                Experience The Witcher 3 in stunning next-generation quality! This free update includes ray-traced reflections, enhanced lighting systems, improved particle effects, and 4K support across all platforms. Geralt's world has never looked better. Download the update today!
+            </div>
+            <div class="news-meta">
+                <span class="news-game">🐺 The Witcher 3</span>
+                <span>📅 2 days ago</span>
+            </div>
+        </div>
+
+      
+        <div class="news-item">
+            <div class="news-header">
+                <div>
+                    <div class="news-title">📢 Cyberpunk 2077: Phantom Liberty DLC - Coming March 20!</div>
+                    <span class="news-badge">ANNOUNCEMENT</span>
+                </div>
+            </div>
+            <div class="news-description">
+                Get ready for the largest expansion to Cyberpunk 2077 yet! Phantom Liberty brings an entirely new storyline, iconic characters, exclusive weapons, new locations to explore, and groundbreaking gameplay features. Pre-order now and receive exclusive in-game rewards and cosmetics!
+            </div>
+            <div class="news-meta">
+                <span class="news-game">🤖 Cyberpunk 2077</span>
+                <span>📅 2 days ago</span>
+            </div>
+        </div>
+
+   
+        <div class="news-item">
+            <div class="news-header">
+                <div>
+                    <div class="news-title">⚠️ Scheduled Server Maintenance - March 15</div>
+                    <span class="news-badge maintenance">MAINTENANCE</span>
+                </div>
+            </div>
+            <div class="news-description">
+                Important: Clone servers will undergo essential maintenance on March 15, 2026, from 2:00 AM to 6:00 AM UTC. During this period, multiplayer services and game access may be unavailable. We apologize for any inconvenience and appreciate your patience as we improve our platform!
+            </div>
+            <div class="news-meta">
+                <span class="news-game">🔧 Platform Update</span>
+                <span>📅 3 days ago</span>
+            </div>
+        </div>
+
+  
+        <div class="news-item">
+            <div class="news-header">
+                <div>
+                    <div class="news-title">💬 Behind the Scenes: Making of Dragon's Dogma 2</div>
+                    <span class="news-badge">DEVELOPER DIARY</span>
+                </div>
+            </div>
+            <div class="news-description">
+                Read exclusive interviews with the Dragon's Dogma 2 development team! Discover the creative vision, challenges overcome, innovative features, and what's next for the franchise. An in-depth behind-the-scenes blog post featuring developers' insights and never-before-seen concept art!
+            </div>
+            <div class="news-meta">
+                <span class="news-game">🐉 Dragon's Dogma 2</span>
+                <span>📅 3 days ago</span>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-header">
+                <div>
+                    <div class="news-title">🎉 Clone Reaches 15 Million Active Players!</div>
+                    <span class="news-badge">MILESTONE</span>
+                </div>
+            </div>
+            <div class="news-description">
+                We're celebrating a massive achievement! Thanks to our incredible community, Clone has reached 15 million active players worldwide. As a heartfelt thank you, every user receives 100 bonus Clone Credits plus exclusive cosmetic rewards. Thank you for being part of our journey!
+            </div>
+            <div class="news-meta">
+                <span class="news-game">👥 Community News</span>
+                <span>📅 4 days ago</span>
+            </div>
+        </div>
+
+    
+        <div class="news-item">
+            <div class="news-header">
+                <div>
+                    <div class="news-title">🌈 New Feature: Social Wishlist Sharing</div>
+                    <span class="news-badge feature">FEATURE</span>
+                </div>
+            </div>
+            <div class="news-description">
+                Connect with friends like never before! The new Social Wishlist Sharing feature allows you to share your <a href="wishlist.html" style="color: #66c0f4; text-decoration: underline;">wishlists</a> with friends, see what games they want to play, and collaborate on group gaming sessions. Get automatic notifications when items go on sale and coordinate gaming nights seamlessly!
+            </div>
+            <div class="news-meta">
+                <span class="news-game">✨ Platform Feature</span>
+                <span>📅 5 days ago</span>
+            </div>
+        </div>
+    </div>
+
+  
+    <div class="footer">
+        <a href="index.html" class="footer-item">
+            <div class="footer-icon">🏠</div>
+            <div class="footer-label">Menu Utama</div>
+        </a>
+        <a href="notifikasi.html" class="footer-item active">
+            <div class="footer-icon">🔔</div>
+            <div class="footer-label">Notifikasi</div>
+        </a>
+        <a href="#" class="footer-item">
+            <div class="footer-icon">☰</div>
+            <div class="footer-label">Menu</div>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
