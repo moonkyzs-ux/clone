@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1b2838;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding-bottom: 100px;
+        }
+        .header {
+            background-color: #171a21;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #66c0f4;
+        }
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 10px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            background-color: #3d4c5a;
+            color: white;
+        }
+        .search-bar input::placeholder {
+            color: #c7d5e0;
+        }
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #66c0f4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1b2838;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section-title {
+            color: #66c0f4;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .menu-card {
+            background-color: #2a475e;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(102, 192, 244, 0.2);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .menu-card:hover {
+            transform: translateY(-2px);
+            background-color: #335876;
+        }
+        .menu-card .card-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(102, 192, 244, 0.15);
+            color: #66c0f4;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        .menu-card .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .menu-card .card-text {
+            color: #c7d5e0;
+            margin-bottom: 0;
+        }
+        .profile-box {
+            background: linear-gradient(135deg, rgba(102,192,244,0.15), rgba(27,40,56,0.95));
+            border: 1px solid rgba(102,192,244,0.2);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        .profile-top {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #66c0f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #1b2838;
+        }
+        .profile-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .profile-role {
+            color: #c7d5e0;
+            font-size: 14px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #171a21;
+            border-top: 1px solid #2a475e;
+            padding: 12px 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .footer-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            cursor: pointer;
+            flex: 1;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .footer-item:hover {
+            color: #66c0f4;
+            background-color: rgba(102, 192, 244, 0.1);
+        }
+        .footer-item.active {
+            color: #66c0f4;
+            border-top: 3px solid #66c0f4;
+        }
+        .footer-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .footer-label {
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="https://img.icons8.com/ios-filled/40/66c0f4/shopping-cart.png" alt="Logo"></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Cari menu atau fitur...">
+        </div>
+        <div class="profile-icon">U</div>
+    </div>
+
+    <div class="content">
+        <h2 class="section-title">Menu Akun</h2>
+
+        <div class="profile-box">
+            <div class="profile-top">
+                <div class="avatar">A</div>
+                <div>
+                    <div class="profile-name">Tristan Ganteng Pake Bgt</div>
+                    <div class="profile-role">Premium Member • Level 99999999+</div>
+                </div>
+            </div>
+            <p style="color: #c7d5e0; margin-bottom: 0;">Lihat detail profil, aktivitas terbaru, dan kelola informasi akun Anda.</p>
+        </div>
+
+        <a href="#profile" class="text-decoration-none text-white">
+            <div class="menu-card d-flex align-items-center">
+                <div class="card-icon">👤</div>
+                <div>
+                    <div class="card-title">Profil</div>
+                    <p class="card-text">Perbarui nama, avatar, dan informasi akun Anda.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="#settings" class="text-decoration-none text-white">
+            <div class="menu-card d-flex align-items-center">
+                <div class="card-icon">⚙️</div>
+                <div>
+                    <div class="card-title">Pengaturan</div>
+                    <p class="card-text">Atur preferensi, keamanan, dan notifikasi.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="#help" class="text-decoration-none text-white">
+            <div class="menu-card d-flex align-items-center">
+                <div class="card-icon">❓</div>
+                <div>
+                    <div class="card-title">Bantuan</div>
+                    <p class="card-text">Temukan solusi cepat untuk pertanyaan umum.</p>
+                </div>
+            </div>
+        </a>
+
+        <div class="menu-card d-flex align-items-center">
+            <div class="card-icon">📦</div>
+            <div>
+                <div class="card-title">Tentang Aplikasi</div>
+                <p class="card-text">Informasi tema, versi, dan kebijakan platform.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="index.html" class="footer-item">
+            <div class="footer-icon">🏠</div>
+            <div class="footer-label">Beranda</div>
+        </a>
+        <a href="notifikasi.html" class="footer-item">
+            <div class="footer-icon">🔔</div>
+            <div class="footer-label">Notifikasi</div>
+        </a>
+        <a href="menu.html" class="footer-item active">
+            <div class="footer-icon">☰</div>
+            <div class="footer-label">Menu</div>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
