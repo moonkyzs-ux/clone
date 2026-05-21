@@ -12,19 +12,30 @@
             font-family: Arial, sans-serif;
         }
         .header {
-            background-color: #171a21;
-            padding: 10px 15px;
+            background: linear-gradient(135deg, #2a475e 0%, #1b2838 100%);
+            padding: 15px 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
         .logo {
             font-size: 24px;
             font-weight: bold;
             color: #66c0f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 50px;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 4px rgba(102, 192, 244, 0.5));
         }
         .search-bar {
             flex-grow: 1;
@@ -51,12 +62,20 @@
             justify-content: center;
             font-weight: bold;
             color: #1b2838;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .profile-icon:hover {
+            background-color: #5aa9da;
+            box-shadow: 0 0 15px rgba(102, 192, 244, 0.6);
+            transform: scale(1.1);
         }
         .nav-tabs {
             background-color: #2a475e;
             border-bottom: none;
             position: sticky;
-            top: 60px;
+            top: 80px;
             z-index: 999;
             justify-content: center;
         }
@@ -235,13 +254,12 @@
         <div class="search-bar">
             <input type="text" placeholder="Search games, friends, etc.">
         </div>
-        <div class="profile-icon">U</div>
+        <a href="profile.html" class="profile-icon">T</a>
     </div>
 
     <div class="banner">
-        <img src="https://via.placeholder.com/800x250/1a1a2e/66c0f4?text=ELDEN+RING+SHADOW+OF+ERDTREE" alt="Elden Ring Promo">
+        <img src="https://assets.gamingdeals.com/storage/elden-ring-shadow-of-the-erdtree-1708516172J81Re.jpg" alt="Elden Ring Promo">
         <div class="banner-overlay">
-            <div class="banner-badge">NEW EXPANSION</div>
             <div class="banner-title">Elden Ring: Shadow of the Erdtree</div>
             <div class="banner-subtitle">Enter the Land of Shadow | Out Now</div>
             <button class="btn btn-primary btn-sm" style="width: fit-content;">Learn More</button>
@@ -272,7 +290,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="game-card">
-                                    <img src="https://via.placeholder.com/200x150/66c0f4/ffffff?text=Cyberpunk+2077" alt="Cyberpunk 2077">
+                                    <img src="https://www.cyberpunk.net/build/images/social-thumbnail-en-ddcf4d23.jpg" alt="Cyberpunk 2077">
                                     <div class="game-info">
                                         <div class="game-title">Cyberpunk 2077</div>
                                         <div class="game-price">$29.99</div>
@@ -281,7 +299,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="game-card">
-                                    <img src="https://via.placeholder.com/200x150/66c0f4/ffffff?text=The+Witcher+3" alt="The Witcher 3">
+                                    <img src="https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f" alt="The Witcher 3">
                                     <div class="game-info">
                                         <div class="game-title">The Witcher Wild Hunt</div>
                                         <div class="game-price">$19.99</div>
@@ -290,7 +308,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="game-card">
-                                    <img src="https://via.placeholder.com/200x150/66c0f4/ffffff?text=Elden+Ring" alt="Elden Ring">
+                                    <img src="https://cdn1-production-images-kly.akamaized.net/y08HEe1Mvb_8Xbfc5x1nY69YZ4c=/1280x720/smart/filters:quality(75):strip_icc()/kly-media-production/medias/3900342/original/024606200_1641884424-Elden_Ring_Steam.jpg" alt="Elden Ring">
                                     <div class="game-info">
                                         <div class="game-title">Elden Ring</div>
                                         <div class="game-price">$39.99</div>
@@ -303,7 +321,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="game-card">
-                                    <img src="https://via.placeholder.com/200x150/66c0f4/ffffff?text=Hades" alt="Hades">
+                                    <img src="https://cdn1.epicgames.com/min/offer/2560x1440-2560x1440-5e710b93049cbd2125cf0261dcfbf943.jpg" alt="Hades">
                                     <div class="game-info">
                                         <div class="game-title">Hades</div>
                                         <div class="game-price">$24.99</div>
@@ -312,7 +330,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="game-card">
-                                    <img src="https://via.placeholder.com/200x150/66c0f4/ffffff?text=Baldurs+Gate+3" alt="Baldur's Gate 3">
+                                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/59827b3d0abf2f29adacfe72fdfd11059d6974e2/capsule_616x353.jpg?t=1777363040" alt="Baldur's Gate 3">
                                     <div class="game-info">
                                         <div class="game-title">Baldur's Gate 3</div>
                                         <div class="game-price">$59.99</div>
@@ -321,9 +339,9 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="game-card">
-                                    <img src="https://via.placeholder.com/200x150/66c0f4/ffffff?text=Dragon+Age" alt="Dragon Age Veilguard">
+                                    <img src="https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000049281/e7200824041808289d4a65589ed368f7e08dc2e538a5fd7ee9f8d39e58015c24" alt="It Takes Two">
                                     <div class="game-info">
-                                        <div class="game-title">Dragon Age Veilguard</div>
+                                        <div class="game-title">It Takes Two        </div>
                                         <div class="game-price">$49.99</div>
                                     </div>
                                 </div>
@@ -394,7 +412,7 @@
             <div class="footer-icon">🔔</div>
             <div class="footer-label">Notifikasi</div>
         </a>
-        <a href="#" class="footer-item">
+        <a href="menu.html" class="footer-item">
             <div class="footer-icon">☰</div>
             <div class="footer-label">Menu</div>
         </a>
