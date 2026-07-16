@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk 2077 - Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-detail">
+    
+    <div class="header detail-header">
+        <a href="dashboard.html" class="back-btn">
+            <span>❮</span> Kembali
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Cari game...">
+        </div>
+        <a href="profile.html" class="profile-icon">T</a>
+    </div>
+
+    
+    <div class="detail-hero-banner">
+        <div class="banner-media-container">
+            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmtjMG5scWM0bDA2d2N5MzEwODlybGt3aWJmemwzZXc2ZGc2NzZiMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pylNZOmEWUMwGXdzQj/giphy.gif" class="banner-media active" alt="Cyberpunk 2077 Banner">
+            <div class="banner-gradient-overlay"></div>
+
+            
+            <div class="hero-content-overlay">
+                <div class="hero-content-inner">
+                    <div class="hero-badge-group">
+                        <span class="hero-badge premium">🌟 Ekspansi Terbaru</span>
+                        <span class="hero-badge trending">🔥 Trending</span>
+                    </div>
+                    <h1 class="hero-title">Cyberpunk 2077</h1>
+                    <p class="hero-subtitle">Masuki Land of Shadow dan alami petualangan yang tak terlupakan</p>
+                    <p class="hero-description">100+ jam konten baru • 30+ Boss Baru • Cerita Mendalam • Senjata Legendaris</p>
+                    
+                    <div class="hero-actions">
+                        <button class="btn-hero btn-hero-primary" onclick="buyCyberpunk2077()">
+                            💰 Beli - Rp 541.614
+                        </button>
+                        <button class="btn-hero btn-hero-secondary" onclick="addWishlistCyberpunk2077()">
+                            ❤️ Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="quick-stats-bar">
+        <div class="stat-item">
+            <span class="stat-icon">⭐</span>
+            <div class="stat-content">
+                <div class="stat-value">9.5/10</div>
+                <div class="stat-label">Rating</div>
+            </div>
+        </div>
+        <div class="stat-item">
+            <span class="stat-icon">👥</span>
+            <div class="stat-content">
+                <div class="stat-value">2.8M</div>
+                <div class="stat-label">Reviews</div>
+            </div>
+        </div>
+        <div class="stat-item">
+            <span class="stat-icon">🎮</span>
+            <div class="stat-content">
+                <div class="stat-value">100+</div>
+                <div class="stat-label">Jam Bermain</div>
+            </div>
+        </div>
+        <div class="stat-item">
+            <span class="stat-icon">✓</span>
+            <div class="stat-content">
+                <div class="stat-value">Tersedia</div>
+                <div class="stat-label">Status</div>
+            </div>
+        </div>
+    </div>
+
+  
+    <div class="detail-nav-tabs">
+        <button class="nav-tab-btn active" data-tab="overview">
+           
+        </button>
+        <button class="nav-tab-btn" data-tab="content">
+            
+        </button>
+        <button class="nav-tab-btn" data-tab="features">
+            
+        </button>
+        <button class="nav-tab-btn" data-tab="reviews">
+            
+        </button>
+    </div>
+
+    
+    <div class="detail-content-wrapper">
+        <div class="detail-tab-pane active" id="tab-overview">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="detail-card">
+                        <h3 class="card-title">Tentang Ekspansi</h3>
+                        <p class="card-text">
+                            Elden Ring: Shadow of the Erdtree adalah ekspansi yang paling ditunggu dari FromSoftware. Membawa Tarnished ke Land of Shadow, sebuah dunia baru yang penuh dengan misteri dan tantangan. Ekspansi ini menampilkan storyline yang kompleks, boss yang legendaris, dan gameplay yang lebih mendalam.
+                        </p>
+                        <p class="card-text">
+                            Dengan lebih dari 100 jam konten baru, ribuan item, dan area eksplorasi yang luas, Cyberpunk 2077 menawarkan pengalaman yang setara dengan game standalone. Ini adalah kisah lanjutan yang krusial dalam memahami lore Elden Ring secara keseluruhan.
+                        </p>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3 class="card-title">Spesifikasi Sistem</h3>
+                        <div class="specs-table">
+                            <div class="spec-row">
+                                <div class="spec-label">OS</div>
+                                <div class="spec-value">Windows 10/11 64-bit</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Processor</div>
+                                <div class="spec-value">Intel i5-8400 / AMD Ryzen 5 2600</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Memory</div>
+                                <div class="spec-value">12 GB RAM</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Storage</div>
+                                <div class="spec-value">150 GB SSD</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Graphics</div>
+                                <div class="spec-value">RTX 2070 / RX 5700 XT</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">DirectX</div>
+                                <div class="spec-value">Version 12</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="sidebar-card trailer-box">
+                        <h4 class="box-title">Trailer Resmi</h4>
+                        <video autoplay muted loop playsinline class="trailer-video">
+                            <source src="https://youtu.be/6uT8wGtB3yQ?si=y2KE3t8IdVtXAcfq" type="video/mp4">
+                            Browser Anda tidak mendukung tag video.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="sidebar-card info-box">
+                        <h4 class="box-title">Informasi Rilis</h4>
+                        <div class="info-row-detail">
+                            <span class="info-key">Tanggal Rilis</span>
+                            <span class="info-val">21 Juni 2024</span>
+                        </div>
+                        <div class="info-row-detail">
+                            <span class="info-key">Developer</span>
+                            <span class="info-val">FromSoftware</span>
+                        </div>
+                        <div class="info-row-detail">
+                            <span class="info-key">Publisher</span>
+                            <span class="info-val">Bandai Namco</span>
+                        </div>
+                        <div class="info-row-detail">
+                            <span class="info-key">Genre</span>
+                            <span class="info-val">Action RPG</span>
+                        </div>
+                        <div class="info-row-detail">
+                            <span class="info-key">Platform</span>
+                            <span class="info-val">PC, PS5, Xbox Series X/S</span>
+                        </div>
+                        <div class="info-row-detail">
+                            <span class="info-key">Bahasa</span>
+                            <span class="info-val">Multi-language</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="detail-tab-pane" id="tab-content">
+            <div class="content-grid-3">
+                <div class="content-feature-card">
+                    <div class="feature-icon">⚔️</div>
+                    <h4>30+ Boss Baru</h4>
+                    <p>Musuh legendaris dengan mekanik unik dan challenge ekstrem. Setiap boss adalah karya seni dalam desain permainan.</p>
+                    <div class="feature-highlight">Difficulty: Extreme</div>
+                </div>
+                <div class="content-feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h4>100+ Item Baru</h4>
+                    <p>Senjata legendaris, spell baru, dan talisman eksklusif. Perluas kemampuan dan build unik Anda.</p>
+                    <div class="feature-highlight">Crafting & Customization</div>
+                </div>
+                <div class="content-feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h4>Area Eksplorasi Luas</h4>
+                    <p>Land of Shadow yang penuh dengan harta tersembunyi, kota bawah tanah, dan pemandangan memukau.</p>
+                    <div class="feature-highlight">Exploration Paradise</div>
+                </div>
+                <div class="content-feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h4>Cerita Mendalam</h4>
+                    <p>Lore yang memperkaya dan karakter ikonik baru. Jawaban untuk banyak misteri dalam Elden Ring.</p>
+                    <div class="feature-highlight">Story-Driven</div>
+                </div>
+                <div class="content-feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <h4>NPC & Quest Baru</h4>
+                    <p>Karakter yang memorable dengan questline yang kompleks dan ending multiple.</p>
+                    <div class="feature-highlight">30+ Quest Lines</div>
+                </div>
+                <div class="content-feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Magic & Abilities</h4>
+                    <p>Spell dan ash of war baru dengan efek spektakuler dan mekanik gameplay inovatif.</p>
+                    <div class="feature-highlight">Game-Changing Powers</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="detail-tab-pane" id="tab-features">
+            <div class="features-showcase">
+                <div class="feature-showcase-item">
+                    <h3>🎮 Gameplay Revolusioner</h3>
+                    <p>Boss battles dengan AI canggih yang adaptif terhadap strategi pemain. Setiap pertarungan terasa unik dan personal. Pattern recognition dan timing adalah kunci menang.</p>
+                </div>
+                <div class="feature-showcase-item">
+                    <h3>🛡️ Sistem Combat Mendalam</h3>
+                    <p>Kombinasi sempurna antara magic, melee, dan ranged combat. Guard counter, parry, dodge roll, dan skill activation menciptakan gameplay yang highly rewarding.</p>
+                </div>
+                <div class="feature-showcase-item">
+                    <h3>🌍 Dunia Terbuka Seamless</h3>
+                    <p>Eksplorasi tanpa loading screen. Area baru yang terhubung dengan dunia utama menciptakan pengalaman yang immersive dan interconnected.</p>
+                </div>
+                <div class="feature-showcase-item">
+                    <h3>👥 Multiplayer Dinamis</h3>
+                    <p>Summon teman untuk kerjasama, atau invade dunia pemain lain untuk PvP. Asynchronous multiplayer menciptakan komunitas yang hidup.</p>
+                </div>
+                <div class="feature-showcase-item">
+                    <h3>🎨 Grafis Memukau</h3>
+                    <p>Ultra-realistic graphics dengan ray tracing. Setiap detail dari armor, weapon, dan environment crafted dengan sempurna untuk visual experience maksimal.</p>
+                </div>
+                <div class="feature-showcase-item">
+                    <h3>🎵 Audio Premium</h3>
+                    <p>Soundtrack legendaris dari Hirokazu Tanaka dan Yuka Kitamura. Immersive sound design yang meningkatkan atmospheric tension di setiap momen.</p>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="detail-tab-pane" id="tab-reviews">
+            <div class="reviews-container">
+                <div class="review-item">
+                    <div class="review-header-detail">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">🎮</div>
+                            <div>
+                                <h5 class="reviewer-name">Gaming Legend</h5>
+                                <span class="reviewer-tag">Verified Buyer</span>
+                            </div>
+                        </div>
+                        <div class="review-rating-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <h6 class="review-title">Masterpiece yang sempurna!</h6>
+                    <p class="review-body">Shadow of the Erdtree bukan hanya ekspansi biasa. Ini adalah karya seni gaming yang memperkaya lore Elden Ring secara signifikan. Boss battles lebih challenging dan memorable dibanding game utama. Definitely worth every rupiah!</p>
+                    <div class="review-footer">
+                        <span class="review-date">2 hari yang lalu</span>
+                        <span class="review-helpful">👍 2,847 orang merasa membantu</span>
+                    </div>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header-detail">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">🏆</div>
+                            <div>
+                                <h5 class="reviewer-name">Action RPG Enthusiast</h5>
+                                <span class="reviewer-tag">Expert Reviewer</span>
+                            </div>
+                        </div>
+                        <div class="review-rating-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <h6 class="review-title">The best FromSoftware has ever made</h6>
+                    <p class="review-body">Tingkat kesulitan yang perfectly balanced. Konten new sangat fresh dan gameplay loop tetap addictive. Multiplayer features bekerja dengan sempurna. Highly recommended untuk semua action RPG fans!</p>
+                    <div class="review-footer">
+                        <span class="review-date">1 minggu yang lalu</span>
+                        <span class="review-helpful">👍 1,456 orang merasa membantu</span>
+                    </div>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header-detail">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">🎯</div>
+                            <div>
+                                <h5 class="reviewer-name">Casual Explorer</h5>
+                                <span class="reviewer-tag">Verified Buyer</span>
+                            </div>
+                        </div>
+                        <div class="review-rating-stars">⭐⭐⭐⭐</div>
+                    </div>
+                    <h6 class="review-title">Challenging tapi sangat memuaskan</h6>
+                    <p class="review-body">Ekspansi ini lebih sulit dari game utama, tapi worth the challenge. Quest line yang engaging dan lore yang mind-blowing. Akan memainkan berkali-kali untuk mengexplore semua secret.</p>
+                    <div class="review-footer">
+                        <span class="review-date">2 minggu yang lalu</span>
+                        <span class="review-helpful">👍 892 orang merasa membantu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="footer">
+        <a href="dashboard.html" class="footer-item">🏠 Beranda</a>
+        <a href="notifikasi.html" class="footer-item">🔔 Notifikasi</a>
+        <a href="wishlist.html" class="footer-item">❤️ Wishlist</a>
+        <a href="keranjang.html" class="footer-item">🛒 Keranjang</a>
+        <a href="profile.html" class="footer-item">👤 Profil</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.nav-tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tabName = this.getAttribute('data-tab');
+                
+                document.querySelectorAll('.detail-tab-pane').forEach(pane => {
+                    pane.classList.remove('active');
+                });
+                document.querySelectorAll('.nav-tab-btn').forEach(b => {
+                    b.classList.remove('active');
+                });
+                
+                document.getElementById('tab-' + tabName).classList.add('active');
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

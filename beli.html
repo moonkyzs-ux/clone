@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Berhasil - Clone Store</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, #0b141a 0%, #111f2b 100%);
+            color: #f4f7fb;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .card {
+            background: #152532;
+            border-radius: 18px;
+            padding: 32px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+            text-align: center;
+        }
+
+        .icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            background: #66c0f4;
+            color: #071118;
+            display: grid;
+            place-items: center;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            color: #66c0f4;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #c9d6e3;
+        }
+
+        .order-box {
+            background: #1c3040;
+            border-radius: 12px;
+            padding: 14px;
+            margin: 20px 0;
+        }
+
+        .order-box strong {
+            color: #f4f7fb;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 12px 16px;
+            background: #66c0f4;
+            color: #071118;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="icon">✓</div>
+        <h1>Checkout Berhasil</h1>
+        <p>Pesanan Anda telah diterima dan sedang diproses. Terima kasih sudah berbelanja.</p>
+
+        <div class="order-box">
+            <p><strong>Nomor Pesanan:</strong> <span id="order-id">-</span></p>
+            <p><strong>Total Bayar:</strong> <span id="order-total">-</span></p>
+            <p><strong>Metode Pembayaran:</strong> <span id="payment-method">-</span></p>
+            <p><strong>Waktu:</strong> <span id="order-time">-</span></p>
+        </div>
+
+        <a class="btn" href="dashboard.html">Kembali ke Dashboard</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const requestedOrderId = params.get('orderId');
+        const savedOrder = JSON.parse(localStorage.getItem('lastOrder') || 'null');
+
+        const order = savedOrder && (!requestedOrderId || savedOrder.id === requestedOrderId) ? savedOrder : null;
+
+        document.getElementById('order-id').textContent = order ? order.id : 'Belum tersedia';
+        document.getElementById('order-total').textContent = order ? new Intl.NumberFormat('id-ID', {
+            style: 'currency',
+            currency: 'IDR',
+            maximumFractionDigits: 0
+        }).format(order.total) : 'Rp 0';
+        document.getElementById('payment-method').textContent = order && order.paymentMethod ? order.paymentMethod : (localStorage.getItem('selectedPaymentMethod') || 'Transfer Bank');
+        document.getElementById('order-time').textContent = order ? order.createdAt : '-';
+    </script>
+</body>
+</html>

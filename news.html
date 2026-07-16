@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="cart-icon">
+            <a href="keranjang.html">
+                <img src="https://img.icons8.com/ios-filled/40/66c0f4/shopping-cart.png" alt="Shopping Cart">
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search news, updates, games...">
+        </div>
+        <a href="profile.html" class="profile-icon">T</a>
+    </div>
+
+    <div class="content">
+        <div class="back-button">
+            <a href="dashboard.html">← Back</a>
+        </div>
+
+        <div id="newsCarousel" class="carousel slide banner-carousel" data-bs-ride="carousel" style="margin-bottom: 20px;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="banner">
+                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzdyazk0bTg3cng0NzM2M21zMTBkOG1odWtmZ2w0aWhlOHVxd3N6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Fe46RNamvIe6NxpZQv/giphy.gif" alt="Game news banner">
+                        <div class="banner-overlay">
+                            <div class="banner-badge">Latest Update</div>
+                            <div class="banner-title">Hades</div>
+                            <div class="banner-subtitle">• Fated Prophecy Updates: Prophecies about characters such as Odysseus and Arachne now have new narrated conclusion scenes, which can be viewed in the Fated List once those Prophecies are fulfilled.
+                                 • Going Steady: Characters with whom Melinoë can have non-Platonic relations may occasionally show interest in continuing to have such relations.
+                                 Forever Gifting: Most Crossroads characters now can be gifted Bath Salts, Twin Lures, or Ambrosia indefinitely after forging a bond with them, in various brief new scenes.
+                                 • New Dialogue Events: Many of the game's characters have new things to say at various points throughout the story.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="banner">
+                        <img src="https://www.grimdarkmagazine.com/wp-content/uploads/2017/05/dragonage-origins_940-492.jpg" alt="Seasonal event banner">
+                        <div class="banner-overlay">
+                            <div class="banner-badge">Season Event</div>
+                            <div class="banner-title">Dragon Age: Origins</div>
+                            <div class="banner-subtitle">Complete missions and claim exclusive rewards before it ends.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="banner">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80" alt="Patch note banner">
+                        <div class="banner-overlay">
+                            <div class="banner-badge">Patch Notes</div>
+                            <div class="banner-title">New Update Improves Performance</div>
+                            <div class="banner-subtitle">Faster loading, smoother gameplay, and bug fixes for all players.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <h2 class="section-title">Fresh Releases & Big Announcements</h2>
+
+        <div class="wishlist-item">
+            <div class="game-title">New Release: Stellar Quest Arrives</div>
+            <p class="item-detail">A brand-new space adventure is now live, bringing stunning visuals, immersive storytelling, and exciting missions.</p>
+            <p class="item-time">2 hours ago</p>
+        </div>
+
+        <div class="wishlist-item">
+            <div class="game-title">Weekend Challenge Is Live</div>
+            <p class="item-detail">Join the seasonal event, complete special missions, and claim exclusive rewards before the event ends.</p>
+            <p class="item-time">5 hours ago</p>
+        </div>
+
+        <div class="wishlist-item">
+            <div class="game-title">Patch 2.1 Improves Performance</div>
+            <p class="item-detail">The latest update brings smoother gameplay, faster loading, and important bug fixes for all players.</p>
+            <p class="item-time">1 day ago</p>
+        </div>
+
+        <div class="wishlist-item">
+            <div class="game-title">Community Milestone Reached</div>
+            <p class="item-detail">We have reached 10 million active players, and we are grateful for your support and continued excitement.</p>
+            <p class="item-time">3 days ago</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="dashboard.html" class="footer-item">
+            <div class="footer-icon">🏠</div>
+            <div class="footer-label">Beranda</div>
+        </a>
+        <a href="notifikasi.html" class="footer-item">
+            <div class="footer-icon">🔔</div>
+            <div class="footer-label">Notifikasi</div>
+        </a>
+        <a href="menu.html" class="footer-item">
+            <div class="footer-icon">☰</div>
+            <div class="footer-label">Menu</div>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

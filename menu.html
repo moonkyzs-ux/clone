@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="cart-icon">
+            <a href="keranjang.html">
+                <img src="https://img.icons8.com/ios-filled/40/66c0f4/shopping-cart.png" alt="Shopping Cart">
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Cari menu atau fitur...">
+        </div>
+        <a href="profile.html" class="profile-icon text-decoration-none">T</a>
+    </div>
+
+    <div class="content">
+        <h2 class="section-title">Menu Akun</h2>
+
+        <div class="profile-box">
+            <div class="profile-top">
+                <div class="avatar">T</div>
+                <div>
+                    <div class="profile-name">Tristan Ganteng Pake Bgt</div>
+                    <div class="profile-role">Premium Member • Level 99999999+</div>
+                </div>
+            </div>
+            <p class="profile-description">Lihat detail profil, aktivitas terbaru, dan kelola informasi akun Anda.</p>
+        </div>
+
+        <a href="profile.html" class="text-decoration-none text-white">
+            <div class="menu-card d-flex align-items-center">
+                <div class="card-icon">👤</div>
+                <div>
+                    <div class="card-title">Profile</div>
+                    <p class="card-text">Perbarui nama, avatar, dan informasi akun Anda.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="setting.html" class="text-decoration-none text-white">
+            <div class="menu-card d-flex align-items-center">
+                <div class="card-icon">⚙️</div>
+                <div>
+                    <div class="card-title">Pengaturan</div>
+                    <p class="card-text">Atur preferensi, keamanan, dan notifikasi.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="help.html" class="text-decoration-none text-white">
+            <div class="menu-card d-flex align-items-center">
+                <div class="card-icon">❓</div>
+                <div>
+                    <div class="card-title">Bantuan</div>
+                    <p class="card-text">Temukan solusi cepat untuk pertanyaan umum.</p>
+                </div>
+            </div>
+        </a>
+
+        <div class="menu-card d-flex align-items-center">
+            <div class="card-icon">📦</div>
+            <div>
+                <div class="card-title">Tentang Aplikasi</div>
+                <p class="card-text">Informasi tema, versi, dan kebijakan platform.</p>
+            </div>
+        </div>
+        
+
+        <button id="logoutButton" class="menu-card d-flex align-items-center logout-card">
+            <div class="card-icon logout-icon">🚪</div>
+            <div>
+                <div class="card-title logout-title">Logout</div>
+                <p class="card-text logout-text">Keluar dari akun dan kembali ke halaman login.</p>
+            </div>
+        </button>
+    </div>
+
+    <div class="footer">
+        <a href="dashboard.html" class="footer-item">
+            <div class="footer-icon">🏠</div>
+            <div class="footer-label">Beranda</div>
+        </a>
+        <a href="notifikasi.html" class="footer-item">
+            <div class="footer-icon">🔔</div>
+            <div class="footer-label">Notifikasi</div>
+        </a>
+        <a href="menu.html" class="footer-item active">
+            <div class="footer-icon">☰</div>
+            <div class="footer-label">Menu</div> 
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            localStorage.removeItem('loggedIn');
+            localStorage.removeItem('username');
+            sessionStorage.removeItem('loggedIn');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

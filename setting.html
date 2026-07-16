@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-settings">
+    <div class="header">
+        <div class="brand"><img src="https://img.icons8.com/ios-filled/50/66c0f4/settings.png" alt="Logo">CLONE SETTINGS</div>
+        <div class="actions">
+            <a href="dashboard.html">Home</a>
+            <a href="profile.html">Profil</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="hero-card">
+            <div class="hero-top">
+                <div class="avatar">S</div>
+                <div class="hero-details">
+                    <h1>Kelola semua preferensimu</h1>
+                    <p>Atur notifikasi, privasi, tampilan, bahasa, dan keamanan akun dari satu tempat dengan nuansa yang konsisten dengan halaman lain.</p>
+                </div>
+                <div class="badge-pill">Customizable</div>
+            </div>
+        </div>
+
+        <div class="section-title">Preferensi Umum</div>
+        <div class="settings-grid">
+            <div class="settings-card">
+                <div class="settings-card-header">
+                    <h2>Notifikasi</h2>
+                    <span class="badge-pill">Aktif</span>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <strong>Push Notification</strong>
+                        <p>Terima notifikasi penting langsung ke perangkat.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <strong>Email Promo</strong>
+                        <p>Dapatkan penawaran dan update terbaru via email.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <strong>Reminder Transaksi</strong>
+                        <p>Pengingat saat ada pembelian atau voucher yang dekat kadaluarsa.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="settings-card">
+                <div class="settings-card-header">
+                    <h2>Privasi & Keamanan</h2>
+                    <span class="badge-pill">Tingkatkan</span>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <strong>Login Two-Factor</strong>
+                        <p>Tambahkan lapisan keamanan saat masuk dari perangkat baru.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <strong>Aktifkan PIN</strong>
+                        <p>Gunakan PIN untuk melindungi transaksi sensitif.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <strong>Notifikasi Login</strong>
+                        <p>Terima pemberitahuan jika ada login dari perangkat tidak dikenal.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="settings-card">
+                <div class="settings-card-header">
+                    <h2>Tampilan</h2>
+                    <span class="badge-pill">Tema</span>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <strong>Mode Gelap</strong>
+                        <p>Gunakan tema gelap yang sudah konsisten dengan seluruh halaman.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <strong>Animasi Halaman</strong>
+                        <p>Matikan animasi untuk pengalaman yang lebih ringan.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <strong>Ukuran Teks</strong>
+                        <p>Sesuaikan ukuran teks agar lebih nyaman dibaca.</p>
+                    </div>
+                    <select class="setting-select">
+                        <option>Normal</option>
+                        <option>Besar</option>
+                        <option>Sangat Besar</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="settings-card">
+                <div class="settings-card-header">
+                    <h2>Pembayaran</h2>
+                    <span class="badge-pill">Cepat</span>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <strong>Top Up Otomatis</strong>
+                        <p>Isi saldo secara otomatis saat mencapai batas tertentu.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <strong>Konfirmasi Pembelian</strong>
+                        <p>Tampilkan dialog konfirmasi sebelum checkout.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <strong>Metode Default</strong>
+                        <p>Pilih metode pembayaran yang paling sering dipakai.</p>
+                    </div>
+                    <select class="setting-select">
+                        <option>Dompet</option>
+                        <option>Kartu</option>
+                        <option>QRIS</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">Aksi Cepat</div>
+        <div class="quick-actions">
+            <a href="wishlist.html" class="quick-card">
+                <div class="quick-icon">🛍️</div>
+                <strong>Wishlist</strong>
+                <span>Kelola barang favorit dan acara khusus.</span>
+            </a>
+            <a href="wallet.html" class="quick-card">
+                <div class="quick-icon">💳</div>
+                <strong>Wallet</strong>
+                <span>Atur saldo, voucher, dan riwayat pembayaran.</span>
+            </a>
+            <a href="notifikasi.html" class="quick-card">
+                <div class="quick-icon">🧭</div>
+                <strong>Bantuan</strong>
+                <span>Temukan panduan, kebijakan, dan dukungan pelanggan.</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="dashboard.html" class="footer-item">
+            <div class="footer-icon">🏠</div>
+            <div class="footer-label">Beranda</div>
+        </a>
+        <a href="notifikasi.html" class="footer-item">
+            <div class="footer-icon">🔔</div>
+            <div class="footer-label">Notifikasi</div>
+        </a>
+        <a href="menu.html" class="footer-item active">
+            <div class="footer-icon">☰</div>
+            <div class="footer-label">Menu</div>
+        </a>
+    </div>
+</body>
+</html>

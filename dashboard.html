@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clone </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="cart-icon">
+          <a href="keranjang.html">
+            <img src="https://img.icons8.com/ios-filled/40/66c0f4/shopping-cart.png" alt="Shopping Cart">
+          </a>
+    </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search games, friends, etc.">
+        </div>
+        <a href="profile.html" class="profile-icon">T</a>
+    </div>
+
+    <div class="banner">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzlvZm0wcnFqanl1aXk0bG04ZjR6cWtvb2FieTh6aG56MHdwNDNtdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/z2kUb2mJTlgNpBcjj8/giphy.gif" type="video/webm" class="banner-image" alt="Elden Ring Shadow of Erdtree Banner">
+        <div class="banner-overlay">
+            <div class="banner-title">Elden Ring Shadow of Erdtree</div>
+            <div class="banner-subtitle">Enter the Land of Shadow | Out Now</div>
+            <a href="detail.html">
+                <button class="btn btn-primary btn-sm btn-fit-content">Learn More</button>
+            </a>
+        </div>
+    </div>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" href="dashboard.html">Menu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="news.html">News</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="wishlist.html">Wishlist</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="wallet.html">Wallet</a>
+        </li>
+    </ul>
+
+    <div class="tab-content content" id="myTabContent">
+        <div class="tab-pane fade show active" id="menu" role="tabpanel" aria-labelledby="menu-tab">
+            <h2 class="section-title">Featured & Recommended</h2>
+            <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="game-card">
+                                    <a href="product1.html" class="game-link">
+                                        <img src="https://www.cyberpunk.net/build/images/social-thumbnail-en-ddcf4d23.jpg" alt="Cyberpunk 2077">
+                                        <div class="game-info">
+                                            <div class="game-title">Cyberpunk 2077</div>
+                                            <div class="game-price">$29.99</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="game-card">
+                                    <a href="product2.html" class="game-link">
+                                        <img src="https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f" alt="The Witcher Wild Hunt">
+                                        <div class="game-info">
+                                            <div class="game-title">The Witcher Wild Hunt</div>
+                                            <div class="game-price">$19.99</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="game-card">
+                                    <a href="product3.html" class="game-link">
+                                        <img src="https://cdn1-production-images-kly.akamaized.net/y08HEe1Mvb_8Xbfc5x1nY69YZ4c=/1280x720/smart/filters:quality(75):strip_icc()/kly-media-production/medias/3900342/original/024606200_1641884424-Elden_Ring_Steam.jpg" alt="Elden Ring">
+                                        <div class="game-info">
+                                            <div class="game-title">Elden Ring</div>
+                                            <div class="game-price">$39.99</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="game-card">
+                                   <a href="product4.html" class="game-link">
+                                        <img src="https://cdn1.epicgames.com/min/offer/2560x1440-2560x1440-5e710b93049cbd2125cf0261dcfbf943.jpg" alt="Hades">
+                                        <div class="game-info">
+                                            <div class="game-title">Hades</div>
+                                            <div class="game-price">$24.99</div>
+                                        </div>
+                                   </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="game-card">
+                                   <a href="product6.html" class="game-link">
+                                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/59827b3d0abf2f29adacfe72fdfd11059d6974e2/capsule_616x353.jpg?t=1777363040" alt="Baldur's Gate 3">
+                                        <div class="game-info">
+                                            <div class="game-title">Baldur's Gate 3</div>
+                                            <div class="game-price">$59.99</div>
+                                        </div>
+                                   </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="game-card">
+                                   <a href="product5.html" class="game-link">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiIXD1ZkWJdG2cAwXYAf2d1lWWyt1Jz25PTTkQwmvd7A&s=10" alt="It Takes Two">
+                                        <div class="game-info">
+                                            <div class="game-title">It Takes Two</div>
+                                            <div class="game-price">$49.99</div>
+                                        </div>
+                                   </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true">&#10094;</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true">&#10095;</span>
+                </button>
+            </div>
+        </div>
+
+        
+        <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">
+            <h2 class="section-title">News & Updates</h2>
+            <div class="wishlist-item">
+                <div class="game-title">New Game Released: Stellar Quest</div>
+                <p class="item-detail">Discover the latest space exploration adventure now available on Clone!</p>
+                <p class="item-time">2 hours ago</p>
+            </div>
+            <div class="wishlist-item">
+                <div class="game-title">Winter Sale Extended!</div>
+                <p class="item-detail">Get up to 80% off on selected games. Don't miss this amazing deal!</p>
+                <p class="item-time">5 hours ago</p>
+            </div>
+            <div class="wishlist-item">
+                <div class="game-title">Community Update: New Features</div>
+                <p class="item-detail">Check out the latest updates and improvements made based on your feedback.</p>
+                <p class="item-time">1 day ago</p>
+            </div>
+            <div class="wishlist-item">
+                <div class="game-title">Achievement Unlocked: Community Milestone</div>
+                <p class="item-detail">We've reached 10 million active players! Thank you for being part of our community!</p>
+                <p class="item-time">3 days ago</p>
+            </div>
+        </div>
+
+
+       
+        <div class="tab-pane fade" id="menu-footer" role="tabpanel" aria-labelledby="menu-footer-tab">
+            <h2 class="section-title">Menu</h2>
+            <div class="wishlist-item clickable">
+                <div class="game-title">⚙️ Settings & Preferences</div>
+                <p class="item-detail">Manage your account and game settings</p>
+            </div>
+            <div class="wishlist-item clickable">
+                <div class="game-title">❓ Help & Support</div>
+                <p class="item-detail">Get help with common issues and contact support</p>
+            </div>
+            <div class="wishlist-item clickable">
+                <div class="game-title">ℹ️ About Clone</div>
+                <p class="item-detail">Information about the platform and terms of service</p>
+            </div>
+            <div class="wishlist-item clickable">
+                <div class="game-title">🚪 Logout</div>
+                <p class="item-detail">Sign out from your account</p>
+            </div>
+        </div>
+    <div class="footer">
+        <a href="dashboard.html" class="footer-item active">
+            <div class="footer-icon">🏠</div>
+            <div class="footer-label">Beranda</div>
+        </a>
+        <a href="notifikasi.html" class="footer-item">
+            <div class="footer-icon">🔔</div>
+            <div class="footer-label">Notifikasi</div>
+        </a>
+        <a href="menu.html" class="footer-item">
+            <div class="footer-icon">☰</div>
+            <div class="footer-label">Menu</div>
+        </a>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        console.log('Clone Loaded');
+    </script>
+</body>
+</html>
